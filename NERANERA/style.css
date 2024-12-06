@@ -1,0 +1,259 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #ffe4e1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ffb6c1;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ff69b4;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.center-image {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.sanrio-gifs {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.question {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #ff99cc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff66b3;
+}
+
+.main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+.main-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.message {
+    width: 100%;
+    text-align: center;
+    color: #ff69b4;
+    font-size: 2em;
+    margin-top: 10px;
+    position: relative;
+}
+
+.click-me {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.click-me-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.click-icon {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.melody-gif {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    transform: rotate(-30deg);
+    z-index: 500;
+    margin-right: 100px;
+}
+
+.melody-gif img {
+    width: 100px;
+    height: auto;
+}
+
+.sanrio-gif {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotate(330deg);
+    z-index: 500;
+    margin-left: 100px;
+}
+
+.sanrio-gif img {
+    width: 100px;
+    height: auto;
+}
+
+.flower-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 2px solid #ff69b4;
+    border-bottom: 2px solid #ff69b4;
+    border-radius: 50%;
+    animation: vine-grow 2s forwards;
+}
+
+.heart-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 2px solid #ff69b4;
+    border-bottom: 2px solid #ff69b4;
+    border-radius: 50%;
+    animation: heart-grow 2s forwards;
+    transform-origin: bottom center;
+}
+
+.click-me button {
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #ff69b4;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.click-me button:hover {
+    background-color: #ff69b4;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+    transition: all 0.3s ease;
+}
+
+.click-me img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.click-me img:hover {
+    transform: none;
+    box-shadow: none;
+    border-radius: 15px;
+}
+
+@keyframes vine-grow {
+    0% {
+        width: 0;
+        height: 0;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        transform: translateX(-50%) rotate(90deg);
+    }
+}
+
+@keyframes heart-grow {
+    0% {
+        width: 0;
+        height: 0;
+        transform: translateX(-50%) rotate(0deg);
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        transform: translateX(-50%) rotate(90deg);
+    }
+}
